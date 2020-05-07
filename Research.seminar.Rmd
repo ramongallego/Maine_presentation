@@ -5,11 +5,11 @@ date: "`r Sys.Date()`"
 output: 
   xaringan::moon_reader:
     seal: false
-    css: ["default", "css/sfah.css", "css/fonts.css", "css/nord.css", "css/nord-light.css", "css/nord-dark.css", "css/font-nord.css"]
+    css: ["default", "css/sfah.css", "css/fonts.css", "css/nord.css", "css/nord-light.css", "css/nord-dark.css", "css/font-nord.css", "css/typo.css"]
     nature:
       highlightStyle: github
       highlightLines: true
-      # ratio: "16:9"
+      ratio: "16:9"
 ---
 class:center,   nord-dark
 
@@ -39,6 +39,10 @@ knitr::opts_chunk$set(echo = F,
 library(tidyverse)
 library(leaflet)
 library(here)
+```
+
+```{css, echo=F}
+.small { font-size: 70% }
 ```
 
 ##  .center[.under-line[Bio]]
@@ -127,11 +131,16 @@ background-size: contain
 
 
 ???
+Theme slide to prepare people for this 
 
+Firsts the core, then bring in the details
 
+Picture for Future directions
 
 _But In all these movements, I have always had a focus on marine communities, and how to describe them, characterize their change and put it in context with the environment that they occur._
 
+---
+eDNA a great tool
 
 ---
 name: meroplankton photos
@@ -149,17 +158,20 @@ class: nord-light, typo-selection
 During my PhD I studied merplankton communities **transition** 
 
 ---
+name: big q in my thesis
+
+---
 class: nord-dark
 What is the species composition in the Ross Sea Coastal waters?
 
 .left-column[
 .center[
-<img src="images/LGP_map.png" alt="pipeline" width="240" />
+<img src="images/LGP_map.png" alt="pipeline" />
 ]]
 
 .right-column[
 .right[
-<img src="images/Larvae.png" alt="pipeline" width="550" />
+<img src="images/Larvae.png" alt="pipeline" />
 ]]
 
 ???
@@ -211,17 +223,15 @@ class: nord-dark
 And we opened the door to applying distribution models to species detected using molecular tools,
 and forecasting shifts in their distributions with climate change. To which we'll come back later  
 
----
-<!-- name: Gradient of environmental change -->
-layout: Classic
-.south[Some text]
 
-.Nord-dark-damp-img<img src="images/change_lv.png" alt="pipeline" width="550" />
 ---
 
 layout: true
 class: nord-light,  typo-selection
 ### .center[Species Detection]
+???
+Here I need to work in the transition
+One species is cool - but multispecies
 ---
 
 name: Key species
@@ -287,7 +297,7 @@ We want to get the most information from our sequencing run
 But can we trust the number of reads assigned to each species as 
 ---
 
-class: nord-dark, middle
+class: nord-dark, middle, center
 name: PCR paper front
 
 
@@ -299,7 +309,7 @@ name: PCR paper front
 How to interpret the number of occurrences of a sequence in a sample?  
 
 ---
-class: nord-dark
+class: nord-dark, typo, typo-selection
 
 
 .pull-left[
@@ -313,7 +323,7 @@ class: nord-dark
 
 .pull-right[ 
  
-## Strong effect on DIVERSITY
+## Strong effect on <div style="color:yellow">DIVERSITY</div>
 
 
 <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig4_HTML.png?as=webp" alt="PCRbias" width="480" />
@@ -330,14 +340,15 @@ class: nord-dark
 
 
 
-## Strong effect on between-sample dissimilarity
+## We can get quantitative information from metabarcoding
+
 ]
 
 
 
 .pull-right[ 
  
-<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig7_HTML.png?as=webp" alt="PCRbias" width="480" />
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig7_HTML.png?as=webp" alt="PCRbias" width="360" />
 
 ]
 
@@ -353,6 +364,9 @@ name: And all those tools will become handy...
 
 .center[<img src="images/highlighted.png" alt="pipeline" width="800" />]
 
+
+???
+So now that we have a set of tools for Quantification, species id and QC we can tackle ecological Qs with eDNA metabarcoding
 
 ---
 
@@ -370,7 +384,7 @@ name: How will forecasted conditions shape coastal communities
 
 ---
 class: nord-dark
-###.center[.fancy[Afectting marine species ]
+###.center[.fancy[Affectting marine species ]
 
 .pull-left[
 <img src="images/oyster pg 2.jpg" alt="PCRbias" width="360" />
@@ -461,7 +475,7 @@ leaflet(data = read_csv(here("data","site.info.csv"))) %>%
 .pull-right[
 
 .center[
-<img src="images/all_tall.png" alt="PCRbias" width="240" />
+<img src="images/ridges.env.vars.png" alt="PCRbias"  />
 ]
 
 ]
@@ -494,45 +508,214 @@ name: But the tides?
 
 --
 
-###<div style="color:yellow">Does tide height and direction affect the community recovered?</div>
+###<div style="color:yellow">Does tide height and direction determine the community recovered?</div>
 ---
-
-###.center[.fancy[What about the tides?]]
-
-* ### It's applicable to many coastal projects
-
-<img src="images/Biol.rep.png" alt="PCRbias" width="360" />
-
-
 name: Continue with OA and marine comms
+layout: false
+###.center[Ocean Acidification and warming<br>.fancy[What about the tides?]]
+
+
+.pull-left[
+*  It's applicable to many coastal projects
+
+
+<img src="images/Tides.png" alt="PCRbias"  width="300"/>
+
+*  Even at small spatial scales
+<img src="images/Tides.map.png" alt="PCRbias"  width="300"/>
+]
+
+.pull-right[
+* It's a small source of variation
+<img src="images/Tides.perm.png" alt="PCRbias"  width="280"/>
+* And communities showed in the same locality regardless<sup>*</sup> of the tide
+<img src="images/Tides.fig.png" alt="PCRbias"  width="380"/>
+
+.right[.footnote[ .small[[*] Except when they don't]]]
+]
+
+---
+layout:
+name: Do we have what we need
+
+* A sampling design that covers the spectrum of the variables to study
+
+* NO TIDES PROBLEM
+
+* Statistical tools to analyze the data
 
 
 ---
+name: Shiny app
+class: nord-dark
+### Question 1: Can we see the spatio temporal patterns of certain spp
 
-name: can we use sequence counts? The NAture of PCR
+### We can visualize the fluctuations
 
 
 ---
-
+class: nord-dark
 name: using both PA and eDNAindex
+### Question 2: Do we see different Communities associated with<br> Temperature and pH
 
+<img src="images/Figure2.2020-05-05.png" alt="PCRbias"  >
 
 ---
-
-name: cluster analysis
-
+layout: true
+name: 
+class: nord-dark
+### Question 3: How do species fare in the future Puget Sound
 
 ---
 name: binomial regression
 
+.fancy[Modelling the presence of each taxa:]
+
+* We fit a binomial regression (presence/absence)
+
+* independent fits for <div style="color:yellow">regions and seasons</div> 
+
+* as a function of Temperature and pH
 
 ---
+
 name: Projections to 2095
 
+### .center[<div style="color:nord-14">Future conditions in Puget Sound under RCP8.5</div>]
+
+.left-column[
+
+### * Target values from Khangaonkar et al, 2019
+
+### * Future scenario shows some extreme values
+
+]
+
+.right-column[
+<img src="images/Future_scenario.png" alt="PCRbias">]
+
+???
+
+Taking advantage from recently published models for the inner sea
+---
+
+
+
+### .center[.fancy[Sampling from the posterior probabilities:]]
+
+.pull-left[
+#### * Each taxa's response
+
+<img src="images/Dinophyceaeridges.png" alt="PCRbias" >
+
+
+]
+
+.pull-right[
+
+#### * Diversity estimates
+<img src="images/Dinophyceaerastertitle.png" alt="PCRbias">
+]
 
 ---
 name: back to the collage
+layout: true
+class: nord-dark, middle
+## .center[Future directions]
+---
 
+### .center[.fancy[Ocean acidification and marine communities]]
+
+.pull-left[
+
+Goals:
+* Extrapolate to a different temperate ecosystem
+
+* Model food web interactions from metabarcoding data
+
+* Project food webs into predicted conditions
+
+* Benthic taxa - Expand dataset to include more localities
+]
+.pull-right[
+Tentative funding:
+* Sea Grant
+* States' DNR
+* Non-profit
+* Aquaculture stakeholders
+
+]
 
 ---
 
+### .center[.fancy[Harmful Algal Blooms]]
+
+.pull-left[
+
+Goals:
+
+* Network of early detection
+
+* Metabarcoding and Multivariate predictors
+
+* Citizen's engagement
+
+
+]
+.pull-right[
+
+Tentative funding:
+* Sea Grant
+* States' DNR
+* Non-profit
+* Aquaculture stakeholders
+
+]
+---
+
+### .center[.fancy[Species Shifts with Climate Change]]
+.pull-left[
+
+Goals:
+
+* Automate data gathering and processing
+
+* Establish collaborations across states
+
+* Project marine invaders risk assesment
+
+* Seascape genetics for benthic-planktonic
+]
+.pull-right[
+
+Tentative funding:
+* NSF
+* States' DNR - Marine invasions
+
+
+]
+
+---
+
+### .center[.fancy[Fisheries: stock assessment]]
+
+.pull-left[
+
+Goals:
+
+* Collect eDNA data alongside current methods
+
+* Establish collaborations with NEFSC
+
+* eDNA qPCR assays and metabarcoding communities
+
+
+]
+.pull-right[
+
+Tentative funding:
+* NOAA
+* Fishing companies 
+
+
+]
