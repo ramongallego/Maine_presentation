@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: 
   xaringan::moon_reader:
     seal: false
-    css: ["default", "css/sfah.css", "css/fonts.css", "css/nord.css", "css/nord-light.css", "css/nord-dark.css", "css/font-nord.css", "css/typo.css"]
+    css: ["default", "css/my-theme.css", "css/sfah.css", "css/fonts.css", "css/nord.css", "css/nord-light.css", "css/nord-dark.css", "css/font-nord.css", "css/typo.css"]
     nature:
       highlightStyle: github
       highlightLines: true
@@ -17,6 +17,10 @@ background-image: linear-gradient(150deg,rgba(46, 52, 64, 90%),rgba(46, 52, 64, 
 background-position: center
 background-size: cover
 
+```{css, echo=F}
+.small { font-size: 70% }
+.huge  { font-size: 120% }
+```
 
 
 # eDNA in marine systems
@@ -24,14 +28,17 @@ background-size: cover
 
  
 ### Investigating community ecology and global change with eDNA, metabarcoding and bioinformatics
-
-.strong[**Ramón Gallego Simón**]
+</br>
+</br>
+</br>
+.huge[**Ramón Gallego Simón**]
 
 
 ---
 name:bio
-class: nord-light
+class: nord-dark
 layout: true
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F,
                       warning = FALSE,
@@ -39,17 +46,19 @@ knitr::opts_chunk$set(echo = F,
 library(tidyverse)
 library(leaflet)
 library(here)
+library (kableExtra)
 ```
 
-```{css, echo=F}
-.small { font-size: 70% }
-```
 
-##  .center[.under-line[Bio]]
+##  .center[Bio]
 
 ---
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Teide.jpg") 
+background-position: center
+background-size: cover
 
-.left-column[
+.leftmost-column[
 .fancy[Ramón Gallego Simón]
 
 
@@ -62,32 +71,55 @@ From the Canary Islands, Spain
 
 
 
-.right-column[
+.center-column[
 ```{r, echo = F}
-leaflet() %>% 
-  addTiles() %>% 
+leaflet() %>%
+  addTiles() %>%
   setView(lat = 28.3, lng = -16.5, zoom = 5.5)
-  
+
 ```
 ]
 
+.rightmost-column[
+.middle[
+```{r, echo = F}
+knitr::include_graphics("images/Canary_Islands.jpg")
+```
 
+]
+
+]
 
 ---
+layout: false
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Madridmequema.jpg") 
+background-position: center
+background-size: cover
 
-.left-column[
-.fancy[Ramón Gallego Simón]
+
+## .center[Ramón Gallego Simón]
+
+.leftmost-column[
+
 
 ```{r, out.height='25%'}
 knitr::include_graphics("images/foto_orla.png")
 ```
 
 BSc and MSc in Madrid, Spain
+
+```{r, out.height='25%'}
+knitr::include_graphics("images/UAM.white.png")
+#TODO: Text box
+```
+
+
 ]
 
 
 
-.right-column[
+.center-column[
 ```{r, echo = F}
 leaflet() %>% 
   addTiles() %>% 
@@ -95,17 +127,42 @@ leaflet() %>%
   
 ```
 ]
----
 
-.left-column[
-.fancy[Ramón Gallego Simón]
+.rightmost-column[
+```{r, out.height='25%'}
+knitr::include_graphics("images/Cabo_De_Gata.jpg")
+```
+
+]
+---
+layout: false
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Fern.jpg") 
+background-position: center
+background-size: cover
+
+## .center[Ramón Gallego Simón]
+
+.leftmost-column[
+
 
 ```{r}
 knitr::include_graphics("images/doztor.jpg")
 ```
 PhD in Auckland, Aotearoa New Zealand
+
+
+```{r, out.height='25%',out.extra='style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img"'}
+knitr::include_graphics("images/uoa-logo-2015-reverse.png")
+knitr::include_graphics("images/NIWA_Logo2018.png")
+#TODO: Text box
+```
+
+
 ]
-.right-column[
+
+.center-column[
+
 ```{r, echo = F}
 leaflet() %>% 
   addTiles() %>% 
@@ -114,6 +171,15 @@ leaflet() %>%
 ```
 ]
 
+.rightmost-column[
+```{r, out.height='25%'}
+knitr::include_graphics("images/Auckland.jpg")
+
+```
+
+]
+
+
 
 ???
 
@@ -121,13 +187,54 @@ All this to say, that coming from Spain to New Zealand... you are in for an inte
 
 ---
 
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Seattle.jpg") 
+background-position: center
+background-size: cover
+
+## .center[Ramón Gallego Simón]
+
+.leftmost-column[
+
+
+```{r}
+knitr::include_graphics("images/PNW.jpg")
+```
+To a Postdoc in Seattle, WA
+
+```{r, out.extra='style="background-color: #9ecff7; padding:5px; display: inline-block;"'}
+knitr::include_graphics("images/SMEA.png")
+knitr::include_graphics("images/UW_trans.png")
+```
+]
+.center-column[
+```{r, echo = F}
+leaflet() %>% 
+  addTiles() %>% 
+  setView(lat = 47, lng = -122, zoom = 7)
+  
+```
+]
+
+.rightmost-column[
+
+```{r}
+knitr::include_graphics("images/2017-05-08-ARL-1470.JPG")
+```
+
+And another postdoc 
+```{r}
+knitr::include_graphics("images/NOAA-fisheries-logo.jpg")
+```
+
+]
+---
+
 layout: false
 name: Interests
-background-image: url("images/facet.png")
+background-image: url("images/CORE.png")
 background-position: center
-background-size: contain
-
-
+background-size: cover
 
 
 ???
@@ -140,7 +247,32 @@ Picture for Future directions
 _But In all these movements, I have always had a focus on marine communities, and how to describe them, characterize their change and put it in context with the environment that they occur._
 
 ---
-eDNA a great tool
+layout: false
+name: Skills
+background-image: url("images/Skills.png")
+background-position: center
+background-size: contain
+
+
+???
+
+AND THAT TAKES developing some _Skills_
+
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/facet.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
 
 ---
 name: meroplankton photos
@@ -158,21 +290,53 @@ class: nord-light, typo-selection
 During my PhD I studied merplankton communities **transition** 
 
 ---
-name: big q in my thesis
+class: nord-dark
+layout: true
+name: Meroplankton
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),url("images/fondo.antartida.JPG")
+background-position: center
+background-size: cover
 
 ---
-class: nord-dark
-What is the species composition in the Ross Sea Coastal waters?
+
+## What is the larval diversity in the Coastal Ross Sea?
+
+</br>
+.pull-left[
+<img src="images/LGP_map.png" alt="pipeline" width =480 />
+]
+
+.pull-right[
+
+.pull-left[<img src="images/Antarctica-New-Zealand-Program-Logo.jpg" alt="pipeline" width =240 />]
+
+.pull-right[<img src="images/uoa-logo-2015-reverse.png" alt="pipeline" width =240 />]
+
+</br>
+
+.center[<img src="images/sampling.jpg" alt="pipeline" width =400 />]
+
+]
+---
+class: middle
 
 .left-column[
-.center[
-<img src="images/LGP_map.png" alt="pipeline" />
-]]
+* ### Many types - how many species?
+</br>
+<img src="images/hole.jpg" alt="pipeline" />
+</br>
+
+]
+
 
 .right-column[
-.right[
+
 <img src="images/Larvae.png" alt="pipeline" />
-]]
+]
+
+.footnote.oc-bg-black.opacity-10.nord-dark[
+**Gallego, R.**, Heimeier, D., Lavery, S., Sewell, M.A. 2015. The meroplankton communities from the
+coastal Ross Sea: a latitudinal study. Hydrobiologia, 761 (1): 195-209]
 
 ???
 
@@ -184,7 +348,7 @@ But a crucial step is a reliable identification of the species found **transitio
 class: nord-dark
 name: Next steps Bathylasma
 
-#### Using Genetic IDs allowed us to link larvae, adults with the environment
+## .center[ Two life stages: how does environmental change affects them?]
 
 .left-column[
 
@@ -198,8 +362,10 @@ name: Next steps Bathylasma
 ]
 
 .right-column[
-.b-center[<img src="images/Profile.png" alt="pipeline" width="450" />]
+.center[<img src="images/Profile.png" alt="pipeline" width="600" />]
+<!-- ![](images/Profile.png) -->
 ]
+
 
 ???
 
@@ -209,34 +375,63 @@ only tells us about the diversity similarity along a gradient, but also about th
 ---
 name: Bathylasma larvae and adult
 class: nord-dark
-#### Species distribution Models to predict loss and gains in habitat suitability
+### Habitat Suitability changes differently for 
 .pull-left[
+### Adults
 <img src="images/change_ad.png" alt="pipeline" width="550" />
 ]
 
 .pull-right[
-
+### Larvae
 <img src="images/change_lv.png" alt="pipeline" width="550" />
 ]
+
+.footnote.oc-bg-black.opacity-10.nord-dark[
+**Gallego, R.**, Basher, Z., Lavery, S., Dennis, T.E., Sewell, M.A. 2017. On the need to consider multiphasic sensitivity of marine organisms to climate change: a case study of the Antarctic acorn barnacle.
+Journal of Biogeography, 44: 2165-2175]
+
 ???
 
 And we opened the door to applying distribution models to species detected using molecular tools,
 and forecasting shifts in their distributions with climate change. To which we'll come back later  
+---
+
+name: Bathylasma larvae and adult
+class: nord-dark
+### Habitat Suitability changes differently for 
+.pull-left[
+### Adults
+<img src="images/change_ad_k.png" alt="pipeline" width="550" />
+]
+
+.pull-right[
+### Larvae
+<img src="images/change_lv_k.png" alt="pipeline" width="550" />
+]
+.footnote.oc-bg-black.opacity-10.nord-dark[
+**Gallego, R.**, Basher, Z., Lavery, S., Dennis, T.E., Sewell, M.A. 2017. On the need to consider multiphasic sensitivity of marine organisms to climate change: a case study of the Antarctic acorn barnacle.
+Journal of Biogeography, 44: 2165-2175]
+---
+name:Onesp-multisp-eDNA
+class: nord-dark, typo-selection
+
+background-image:url("images/eDNA_concept.png")
 
 
 ---
 
-layout: true
-class: nord-light,  typo-selection
-### .center[Species Detection]
-???
-Here I need to work in the transition
-One species is cool - but multispecies
----
+class: nord-dark
 
-name: Key species
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 50%), rgba(255, 255, 255, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+## .center.nord11[Species Detection]
 
-.center[<img src="images/Species.detection.png" alt="pipeline" width="800" />]
+
+
+
+
+.center[<img src="images/Step1_Species.png" alt="pipeline" width="800" />]
+
 
 ???
 
@@ -245,30 +440,53 @@ And directly linked to this idea of linking Certain key species with their commu
 detect and identify sequences to the species they originated fromd
 
 ---
-class: nord-dark
+class: nord-light,  typo-selection
+name: bkg1
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 50%), rgba(255, 255, 255, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+layout: true
+---
+
+## .center.nord11[Species Detection]
+
+.center[<img src="images/Species.detection.png" alt="pipeline" width="800" />]
+
+---
+class: nord-light
 name: Pipelines
+layout: false
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 50%), rgba(255, 255, 255, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+</br> 
+## .center.nord9[BIOINFORMATICS for species ID]
+</br> 
+.pull-left.oc-bg-black.opacity-40.nord-light[
 
-#### .center[BIOINFORMATICS for species ID]
+* ####  A demultiplexing and clustering pipeline
 
-.pull-left[
- * A demultiplexing and clustering pipeline
+.center[<img src="images/demultiplexer.png" alt="pipeline" width="350" />]
+
+.center[[github.com/ramongallego](https://github.com/ramongallego?tab=repositories) 
+<img src="images/GitHub-Mark-64px.png" alt="pipeline" />]
  
- <img src="images/demultiplexer.png" alt="pipeline" width="240" />
+ * A locus-specific classification tree with curated sequences 
  
 
- * A locus-specific classification tree with curated reads 
+
 ]
 
---
 
-.pull-right[
+.pull-right.oc-bg-black.opacity-10.nord-light[
  * QC and decontamination steps
  
- <img src="images/visual.anova.png" alt="pipeline" width="240" />
+ 
+
+ .center[<img src="images/visual.anova.png" alt="pipeline" width="350" />]
+ 
  
 
  
-#### High confidence in presence and identity 
+* High confidence in presence and identity 
  
  
  
@@ -279,14 +497,64 @@ name: Pipelines
 So I designed a bioinformatics pipeline to ensure we
 
 ---
+name: Solvingnumbers
+
+
+## Now we have an abundance table
+</br>
+
+```{r dataTABLE, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+convert.names<- function(x){paste0("Sample", 1:length(x))}
+read_csv(here("data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("data", "Annotated.hashes.csv"))) %>% 
+  unite(family, genus, species, sep = "|", col = "taxa") %>% 
+  filter(taxa !="NA|NA|NA") %>% 
+ 
+  group_by(taxa) %>% tally %>% arrange(desc(n)) %>% slice(1:10) %>% 
+  pull(taxa) -> keepers 
+  read_csv(here("data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("data", "Annotated.hashes.csv"))) %>% 
+   unite(family, genus, species, sep = "|", col = "taxa", remove = F) %>%
+    mutate(label = case_when(is.na(species) ~  paste0(genus, " sp."),
+                                                   TRUE            ~ species)) %>% 
+  
+    filter(Miseq_run ==1,  taxa %in% keepers) %>% 
+    mutate(sample = fct_relabel(sample, convert.names)) %>% 
+    arrange(sample) %>% 
+    pivot_wider(id_cols = label, names_from = sample, values_from = nReads, values_fill = list (nReads = 0), values_fn = list(nReads= sum)) %>% 
+    rename (Taxa = label) %>%
+    select(1:7) %>% 
+    kable() %>% 
+    kable_styling(full_width = T) %>% 
+       column_spec(1, italic  = T) %>% 
+       column_spec(2:6, width = '1in') -> nice.table
+   
+
+nice.table
+```
+
+---
+## What does this tell us about the world?
+</br>
+
+```{r, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+nice.table %>% 
+  column_spec(2, width = '1in', background = "yellow") %>% 
+  row_spec(1,background = "yellow") 
+```
+
+---
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/eDNA_concept.png)
+background-size: cover
 layout: true
-class: nord-light,  typo-selection
 ### .center[eDNA metabarcoding and quantification]
+
+---
 
 
  
 
----
 
 
 .center[<img src="images/Simulation.png" alt="pipeline" width="800" />]
@@ -313,7 +581,7 @@ class: nord-dark, typo, typo-selection
 
 
 .pull-left[
-<img src="images/UnderstandingPCR.png" alt="PCRbias" width="200" />
+
 
 ## Differential Primer Affinity
 
@@ -325,37 +593,46 @@ class: nord-dark, typo, typo-selection
  
 ## Strong effect on <div style="color:yellow">DIVERSITY</div>
 
-
-<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig4_HTML.png?as=webp" alt="PCRbias" width="480" />
-
 ]
+
+.center[<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig4_HTML.png?as=webp" alt="PCRbias" width="600" />
+]
+
 
 ---
 
 class: nord-dark
 
 
-.pull-left[
+.left-column[
+</br>
 <img src="images/UnderstandingPCR.png" alt="PCRbias" width="200" />
 
 
 
-## We can get quantitative information from metabarcoding
+
 
 ]
 
 
 
-.pull-right[ 
+.right-column[ 
  
-<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig7_HTML.png?as=webp" alt="PCRbias" width="360" />
+.center[## We can get quantitative information from metabarcoding]
 
 ]
 
+.center[
+<img src="images/Understand_Fig2.png" alt="PCRbias" width="600" />]
 
+.footnote.oc-bg-black.opacity-10.nord-dark[
+Kelly, R.P., Shelton, A., **Gallego, R**. 2019. Understanding PCR Processes to Draw Meaningful Conclusions from Environmental DNA Studies. Scientific Reports, 9(1):1-14.]
 ---
+name:OA_cover
 layout: true
-class: nord-light,  typo-selection
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
 ### .center[Ocean Acidification and warming]
 
 ---
@@ -373,12 +650,13 @@ So now that we have a set of tools for Quantification, species id and QC we can 
 class: nord-dark
 name: How will forecasted conditions shape coastal communities
 
-###.center[.fancy[.title[Environmental Conditions are changing at rapid pace]]]
 
 .pull-left[
-.center[<img src="images/sst.models.1.png" alt="sst" width="250" />]]
+</br>
+.center[<img src="images/sst.models.1.png" alt="sst" width="400" />]]
 
 .pull-right[
+</br>
 <img src="images/pH_Global_ave_E.png" alt="PCRbias" width="480" /> 
 ]
 
@@ -485,14 +763,18 @@ name: Smpling design
 class: nord-dark
 ###.center[.fancy[Sampling design]]
 
+.left-column[
 * Monthly sampling
     * Both eDNA and environmental sensing
-
+</br>
 * Biological replication
-
-.right[<img src="images/Biol.rep.png" alt="PCRbias" width="360" />]
-
+</br>
 * Technical replication
+]
+.right-column.center[<img src="images/Biol.rep.png" alt="PCRbias" width="720" />
+]
+
+.footnote.oc-bg-black.opacity-10.center.nord-dark[**Gallego, R.**, Jacobs-Palmer, E., Cribari, K., Kelly, R.P. Environmental DNA Metabarcoding Reveals Win- ners and Losers of Global Change in Coastal Waters. Under resubmission at Proceedings B.]
 
 ???
 
@@ -510,45 +792,74 @@ name: But the tides?
 
 ###<div style="color:yellow">Does tide height and direction determine the community recovered?</div>
 ---
-name: Continue with OA and marine comms
 layout: false
-###.center[Ocean Acidification and warming<br>.fancy[What about the tides?]]
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/low-tide1.jpg)
+background-size: cover
+name: Tides1
 
 
-.pull-left[
-*  It's applicable to many coastal projects
+###.center[What about the tides?]
+---
+template: Tides1
 
 
-<img src="images/Tides.png" alt="PCRbias"  width="300"/>
 
-*  Even at small spatial scales
-<img src="images/Tides.map.png" alt="PCRbias"  width="300"/>
+.left-column.huge[
+* Even at small spatial scales]
+
+.right-column.center[
+<img src="images/Tides.map.png" alt="PCRbias"  width="600"/>
 ]
+---
+template: Tides1
 
-.pull-right[
-* It's a small source of variation
-<img src="images/Tides.perm.png" alt="PCRbias"  width="280"/>
-* And communities showed in the same locality regardless<sup>*</sup> of the tide
-<img src="images/Tides.fig.png" alt="PCRbias"  width="380"/>
+.left-column.huge[
+* It's a small source of variation]
 
-.right[.footnote[ .small[[*] Except when they don't]]]
+.right-column.center[
+<img src="images/Tides.perm.png" alt="PCRbias"  width="600"/>
 ]
 
 ---
-layout:
+template: Tides1
+
+.left-column.huge[
+* And communities showed in the same locality regardless<sup>*</sup> of the tide]
+
+.right-column.center[
+<img src="images/Tides.fig.png" alt="PCRbias"  width="600"/>
+]
+
+
+.footnote.oc-bg-black.opacity-10.center.nord-dark[Kelly, R. P., **Gallego, R.**, Jacobs-Palmer, E. 2018. The effect of tides on nearshore environmental DNA.
+PeerJ, 6:e4521.]
+
+---
+template:OA_cover
 name: Do we have what we need
+layout: true
 
-* A sampling design that covers the spectrum of the variables to study
+---
 
-* NO TIDES PROBLEM
+### Have we covered our bases? (This is baseball talk, right?)
 
-* Statistical tools to analyze the data
+* ### A sampling design that covers the spectrum of the variables to study
+
+* ###   We account for the influence of tides
+
+* ### Bioinformatics tools to clean the data
+
+
 
 
 ---
 name: Shiny app
 class: nord-dark
-### Question 1: Can we see the spatio temporal patterns of certain spp
+
+## .center[Question 1: Can we see the spatio temporal patterns of the species found]
+
+</br>
 
 ### We can visualize the fluctuations
 
@@ -556,38 +867,42 @@ class: nord-dark
 ---
 class: nord-dark
 name: using both PA and eDNAindex
-### Question 2: Do we see different Communities associated with<br> Temperature and pH
+### .center[Question 2: Do we see different Communities associated with<br> Temperature and pH]
+</br>
 
-<img src="images/Figure2.2020-05-05.png" alt="PCRbias"  >
+<img src="images/Figure2.2020-05-05.png" alt="PCRbias" width="1300" >
 
 ---
-layout: true
+
 name: 
 class: nord-dark
 ### Question 3: How do species fare in the future Puget Sound
 
----
-name: binomial regression
 
-.fancy[Modelling the presence of each taxa:]
 
-* We fit a binomial regression (presence/absence)
+
+##.fancy[Modelling the presence of each taxa:]
+
+* We fit a logistical regression (presence/absence)
+
 
 * independent fits for <div style="color:yellow">regions and seasons</div> 
 
-* as a function of Temperature and pH
+* With Temperature and pH as fixed effects
 
 ---
 
 name: Projections to 2095
 
-### .center[<div style="color:nord-14">Future conditions in Puget Sound under RCP8.5</div>]
+### .center[Future conditions in Puget Sound under RCP8.5]
 
 .left-column[
 
-### * Target values from Khangaonkar et al, 2019
+*  .huge[Target values from Khangaonkar et al, 2019]
 
-### * Future scenario shows some extreme values
+*  .huge[Future scenario shows some extreme values]
+
+* .huge[Most of the conditions are already present in today's scenario]
 
 ]
 
@@ -603,43 +918,77 @@ Taking advantage from recently published models for the inner sea
 
 ### .center[.fancy[Sampling from the posterior probabilities:]]
 
-.pull-left[
-#### * Each taxa's response
+
+* ####  Each taxa's response
 
 <img src="images/Dinophyceaeridges.png" alt="PCRbias" >
 
 
-]
+---
 
-.pull-right[
+### .center[.fancy[Sampling from the posterior probabilities:]]
 
-#### * Diversity estimates
-<img src="images/Dinophyceaerastertitle.png" alt="PCRbias">
-]
+* ####  Diversity estimates
+<img src="images/Dinophyceaerastertitle.png" alt="PCRbias" width="850">
+
+---
+
+##.left.nord13[In Summary:]
+
+* We need model systems that naturally experience Temperature and pH fluctuations
+--
+* eDNA metabarcoding is a really powerfull tool to sample:
+    
+    * across major taxa
+    * studying 100s of species at a time
+--
+* Careful consideration of:
+    
+    * field,
+    * laboratory,
+    * bioinformatics processes
+--
+* It pays off with:
+
+    * community-wide,
+    * single species projections
+
 
 ---
 name: back to the collage
 layout: true
 class: nord-dark, middle
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/AcadiaNP.jpg)
+background-size: cover
 ## .center[Future directions]
 ---
 
-### .center[.fancy[Ocean acidification and marine communities]]
+### .center[.fancy[Ocean acidification and warming: impact on marine communities]]
 
-.pull-left[
+---
+
+#### .center[.fancy[Ocean acidification and warming: impact on marine communities]]
+
+</br>
+.pull-left.oc-bg-black.opacity-40.nord-dark[
 
 Goals:
-* Extrapolate to a different temperate ecosystem
+
+* Extrapolate to a different cold-temperate ecosystem
 
 * Model food web interactions from metabarcoding data
 
 * Project food webs into predicted conditions
 
 * Benthic taxa - Expand dataset to include more localities
+
 ]
-.pull-right[
-Tentative funding:
+
+.pull-right.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
 * Sea Grant
+* NOAA's Ocean Acidification Program
 * States' DNR
 * Non-profit
 * Aquaculture stakeholders
@@ -650,7 +999,12 @@ Tentative funding:
 
 ### .center[.fancy[Harmful Algal Blooms]]
 
-.pull-left[
+---
+
+### .center[.fancy[Harmful Algal Blooms]]
+</br>
+
+.pull-left.oc-bg-black.opacity-40.nord-dark[
 
 Goals:
 
@@ -660,21 +1014,32 @@ Goals:
 
 * Citizen's engagement
 
+<img src="images/Pseudonitzschia2.jpg" alt="PCRbias" width="450">
+
 
 ]
-.pull-right[
+.pull-right.oc-bg-black.opacity-40.nord-dark[
 
-Tentative funding:
+Potential partners:
 * Sea Grant
 * States' DNR
 * Non-profit
 * Aquaculture stakeholders
+* High Schools
 
 ]
 ---
 
 ### .center[.fancy[Species Shifts with Climate Change]]
-.pull-left[
+
+---
+class: center
+
+#### .center[.fancy[Species Shifts with Climate Change]]
+
+
+
+.leftmost-column.oc-bg-black.opacity-40.nord-dark[
 
 Goals:
 
@@ -686,12 +1051,28 @@ Goals:
 
 * Seascape genetics for benthic-planktonic
 ]
-.pull-right[
 
-Tentative funding:
+.center-column[
+.center[
+
+
+```{r, out.width="85%", out.extra='style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img"'}
+knitr::include_graphics("images/SDMs.png" )
+knitr::include_graphics("images/green.crab.jpg" )
+```
+]
+
+
+
+
+]
+
+.rightmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
 * NSF
-* States' DNR - Marine invasions
-
+* State of Maine DMR - Marine invasions
+* Citizen scientists
 
 ]
 
@@ -699,7 +1080,11 @@ Tentative funding:
 
 ### .center[.fancy[Fisheries: stock assessment]]
 
-.pull-left[
+---
+class: center
+#### .center[.fancy[Fisheries: stock assessment]]
+
+.leftmost-column.oc-bg-black.opacity-40.nord-dark[
 
 Goals:
 
@@ -711,11 +1096,116 @@ Goals:
 
 
 ]
-.pull-right[
 
-Tentative funding:
+.center-column[
+.center[
+
+
+```{r, out.width="100%", out.extra='style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img"'}
+knitr::include_graphics("images/plots.for.choosing.png" )
+
+```
+]
+
+]
+
+
+.rightmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
 * NOAA
 * Fishing companies 
+  ]
+
+---
+
+
+### .center[.fancy[Biodiversity surveys]]
+
+---
+class: center
+#### .center[.fancy[Biodiversity surveys]]
+
+.leftmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Goals:
+
+* Leverage from in house & collaborators eDNA surveys
+
+* Design & test in silico & laboratory assays
 
 
 ]
+
+.center-column[
+.center[
+
+
+```{r, out.width="100%", out.extra='style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img"'}
+knitr::include_graphics("images/Deepwater.jpeg" )
+
+```
+]
+
+]
+
+
+.rightmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
+* NOAA
+* Fishing companies
+* WHOI
+  ]
+
+---
+
+
+
+
+### .center[.fancy[Biodiversity statistics]]
+
+---
+class: center
+#### .center[.fancy[Biodiversity statistics]]
+
+.leftmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Goals:
+
+* Crunching numbers
+
+* A set of guidelines for biodiversity statistics with eDNA / metabarcoding 
+
+
+]
+
+.center-column[
+.center[
+
+
+```{r, out.width="100%", out.extra='style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img"'}
+
+knitr::include_graphics("images/richness.png" )
+
+```
+]
+
+]
+
+
+.rightmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
+* Dr Amy Willis
+* Dr Ryan Kelly
+* Dr Ole Shelton]
+
+---
+layout: false
+class: nord-dark, middle
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/RGS.jpg)
+
+## .center[Thanks for listening]
+
+
