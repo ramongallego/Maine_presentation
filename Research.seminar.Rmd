@@ -234,7 +234,7 @@ layout: false
 name: Interests
 background-image: url("images/CORE.png")
 background-position: center
-background-size: cover
+background-size: contain
 
 
 ???
@@ -264,6 +264,76 @@ AND THAT TAKES developing some _Skills_
 
 layout: false
 name: Interests
+background-image: url("images/OTHERPROJECTS1.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS2.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS3.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS4.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS5.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
 background-image: url("images/facet.png")
 background-position: center
 background-size: contain
@@ -278,7 +348,7 @@ Which have allowed me to tackle other questions. And that's one of the things th
 name: meroplankton photos
 layout: true
 class: nord-light, typo-selection
-### .center[Meroplankton in the Southern Ocean]
+## .center.bold[Meroplankton in the Southern Ocean]
 
 ---
 
@@ -416,8 +486,8 @@ name:Onesp-multisp-eDNA
 class: nord-dark, typo-selection
 
 background-image:url("images/eDNA_concept.png")
-
-
+.right[
+.footnote.small[Kelly Lance 2014]]
 ---
 
 class: nord-dark
@@ -458,11 +528,11 @@ layout: false
 background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 50%), rgba(255, 255, 255, 20%)),url(images/eDNA_concept.png)
 background-size: cover
 </br> 
-## .center.nord9[BIOINFORMATICS for species ID]
+# .center.nord9.bold[BIOINFORMATICS for species ID]
 </br> 
-.pull-left.oc-bg-black.opacity-40.nord-light[
+.pull-left.oc-bg-black.opacity-40.nord-light.bold[
 
-* ####  A demultiplexing and clustering pipeline
+* ####  .bold[A demultiplexing and clustering pipeline]
 
 .center[<img src="images/demultiplexer.png" alt="pipeline" width="350" />]
 
@@ -476,7 +546,7 @@ background-size: cover
 ]
 
 
-.pull-right.oc-bg-black.opacity-10.nord-light[
+.pull-right.oc-bg-black.opacity-10.nord-light.bold[
  * QC and decontamination steps
  
  
@@ -580,23 +650,24 @@ How to interpret the number of occurrences of a sequence in a sample?
 class: nord-dark, typo, typo-selection
 
 
-.pull-left[
+.left-column[
 
 
-## Differential Primer Affinity
+ ## .nord4.bold[Differential Primer Affinity]
 
+ ## .nord4.bold[Strong effect on] .nord13.bold[DIVERSITY]
 ]
 
 --
 
-.pull-right[ 
+.right-column[ 
  
-## Strong effect on <div style="color:yellow">DIVERSITY</div>
 
-]
 
-.center[<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig4_HTML.png?as=webp" alt="PCRbias" width="600" />
-]
+
+
+.center[<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig4_HTML.png?as=webp" alt="PCRbias" width="900" />
+]]
 
 
 ---
@@ -608,7 +679,7 @@ class: nord-dark
 </br>
 <img src="images/UnderstandingPCR.png" alt="PCRbias" width="200" />
 
-
+## .center[ We can get .bold[quantitative] information from metabarcoding]
 
 
 
@@ -618,12 +689,11 @@ class: nord-dark
 
 .right-column[ 
  
-.center[## We can get quantitative information from metabarcoding]
 
-]
+
 
 .center[
-<img src="images/Understand_Fig2.png" alt="PCRbias" width="600" />]
+<img src="images/Understanding1.png" alt="PCRbias" width="540" />]]
 
 .footnote.oc-bg-black.opacity-10.nord-dark[
 Kelly, R.P., Shelton, A., **Gallego, R**. 2019. Understanding PCR Processes to Draw Meaningful Conclusions from Environmental DNA Studies. Scientific Reports, 9(1):1-14.]
@@ -662,7 +732,7 @@ name: How will forecasted conditions shape coastal communities
 
 ---
 class: nord-dark
-###.center[.fancy[Affectting marine species ]
+## .center[.fancy[Affectting marine species ]
 
 .pull-left[
 <img src="images/oyster pg 2.jpg" alt="PCRbias" width="360" />
@@ -695,6 +765,10 @@ name: A lot of info on many spp
 
 <img src="images/paper_snip.OA.Meta.png" alt="PCRbias" height="120" />
 
+???
+
+Those effects are not happenning in a vacuum, but likely with Temp
+And in different directions
 ---
 class: nord-dark
 Name: Ecosystem-wide: not so much
@@ -713,7 +787,7 @@ Name: Ecosystem-wide: not so much
 .pull-right[
 .middle[
 .fancy[
-### Expanding to other ecosystems]]
+## Expanding to other ecosystems]]
 ]
 ---
 name: WHy Hood Canal
@@ -729,7 +803,7 @@ Naturally occuring High *p*CO<sub>2</sub>  levels offer a view of not far-fetche
 class: nord-dark
 name: Research plan
 
-###.center[.fancy[.title[Experimental design]]]
+##.center[.fancy[.title[Experimental design]]]
 
 .pull-left[
 
@@ -753,7 +827,7 @@ leaflet(data = read_csv(here("data","site.info.csv"))) %>%
 .pull-right[
 
 .center[
-<img src="images/ridges.env.vars.png" alt="PCRbias"  />
+<img src="images/ridges.env.vars.png" alt="PCRbias" />
 ]
 
 ]
@@ -761,20 +835,20 @@ leaflet(data = read_csv(here("data","site.info.csv"))) %>%
 ---
 name: Smpling design
 class: nord-dark
-###.center[.fancy[Sampling design]]
+##.center[.fancy[Sampling design]]
 
 .left-column[
-* Monthly sampling
-    * Both eDNA and environmental sensing
-</br>
-* Biological replication
-</br>
-* Technical replication
+* .huge.bold[Monthly sampling]
+      * Both eDNA and environmental sensing
+
+*  .huge.bold[Biological replication]
+
+* .huge.bold[Technical replication]
 ]
 .right-column.center[<img src="images/Biol.rep.png" alt="PCRbias" width="720" />
 ]
 
-.footnote.oc-bg-black.opacity-10.center.nord-dark[**Gallego, R.**, Jacobs-Palmer, E., Cribari, K., Kelly, R.P. Environmental DNA Metabarcoding Reveals Win- ners and Losers of Global Change in Coastal Waters. Under resubmission at Proceedings B.]
+.footnote.oc-bg-black.opacity-10.center.nord-dark[**Gallego, R.**, Jacobs-Palmer, E., Cribari, K., Kelly, R.P. Environmental DNA Metabarcoding Reveals Winners and Losers of Global Change in Coastal Waters. Under resubmission at *Proceedings B.*]
 
 ???
 
@@ -782,7 +856,7 @@ This sampling was carried out in a single day, which when working in a coastal s
 ---
 class: nord-dark, middle
 name: But the tides?
-###.center[.fancy[What about the tides?]]
+#.center.nord13.bold[.fancy[What about the tides?]]
 
 * ### Sampling happens in one day and
 
@@ -790,7 +864,7 @@ name: But the tides?
 
 --
 
-###<div style="color:yellow">Does tide height and direction determine the community recovered?</div>
+###.center.nord13.bold[Do tide height and direction determine the community recovered?]
 ---
 layout: false
 class: nord-dark,  typo-selection
@@ -799,14 +873,14 @@ background-size: cover
 name: Tides1
 
 
-###.center[What about the tides?]
+##.center[What about the tides?]
 ---
 template: Tides1
 
 
 
 .left-column.huge[
-* Even at small spatial scales]
+* .huge.bold[Even at small spatial scales]]
 
 .right-column.center[
 <img src="images/Tides.map.png" alt="PCRbias"  width="600"/>
@@ -815,20 +889,20 @@ template: Tides1
 template: Tides1
 
 .left-column.huge[
-* It's a small source of variation]
+* .huge.bold[It's a small source of variation]]
 
 .right-column.center[
-<img src="images/Tides.perm.png" alt="PCRbias"  width="600"/>
+<img src="images/Tides.perm.png" alt="PCRbias"  />
 ]
 
 ---
 template: Tides1
 
-.left-column.huge[
-* And communities showed in the same locality regardless<sup>*</sup> of the tide]
+.left-column[
+* .huge.bold[And communities showed in the same locality regardless<sup>*</sup> of the tide]]
 
 .right-column.center[
-<img src="images/Tides.fig.png" alt="PCRbias"  width="600"/>
+<img src="images/Tides.fig.png" alt="PCRbias" />
 ]
 
 
@@ -837,19 +911,26 @@ PeerJ, 6:e4521.]
 
 ---
 template:OA_cover
-name: Do we have what we need
+name: Dowehavewhatweneed
 layout: true
 
 ---
 
-### Have we covered our bases? (This is baseball talk, right?)
+</br>
+## .bold[Have we covered our bases?] (This is baseball talk, right?)
+.column1[
+*  .center.bold.huge.nord12[A sampling design] 
+<img src="images/experimental.design.png" alt="PCRbias" />
+]
+.column2[
+* .center.bold.huge.nord12[Influence of tides]
+.center[<img src="images/Tides.fig.png" alt="PCRbias" />]
+]
 
-* ### A sampling design that covers the spectrum of the variables to study
-
-* ###   We account for the influence of tides
-
-* ### Bioinformatics tools to clean the data
-
+.column3[
+* .center.bold.huge.nord12[Bioinformatics tools to clean the data]
+.center[<img src="images/demultiplexer.png" alt="pipeline" width="350" />]
+]
 
 
 
@@ -857,52 +938,74 @@ layout: true
 name: Shiny app
 class: nord-dark
 
-## .center[Question 1: Can we see the spatio temporal patterns of the species found]
+## .center[.nord12[Question 1]: Can we see the spatio temporal patterns of the species found]
 
 </br>
 
 ### We can visualize the fluctuations
 
+<video width="320" height="240">
+<source src="images/Shiny.mov" type="video/mp4">
+</video>
+
 
 ---
 class: nord-dark
 name: using both PA and eDNAindex
-### .center[Question 2: Do we see different Communities associated with<br> Temperature and pH]
-</br>
-
-<img src="images/Figure2.2020-05-05.png" alt="PCRbias" width="1300" >
-
+layout: true
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
 ---
 
-name: 
+### .center[.nord12[Question 2]: Do we see different Communities associated with<br> Temperature and pH]
+
+---
+### .nord12[Question 2]: Community changes
+.center[
+<img src="images/Figure2.2020-05-05_1.png" alt="PCRbias" width="560" >
+]
+---
+### .nord12[Question 2]: Community changes
+.center[
+<img src="images/Figure2.2020-05-05_2.png" alt="PCRbias" width="600" >
+]
+---
+### .nord12[Question 2]: Community changes
+.center[
+<img src="images/Figure2.2020-05-05_3.png" alt="PCRbias" width="600" >
+]
+---
+layout: true
+template: Dowehavewhatweneed
+name: Q3
 class: nord-dark
-### Question 3: How do species fare in the future Puget Sound
 
+---
+### .nord12[Question 3]: How do species fare in the future Puget Sound
 
-
-
+</br>
 ##.fancy[Modelling the presence of each taxa:]
+</br>
+* .huge.bold[We fit a logistical regression (presence/absence)]
+</br>
 
-* We fit a logistical regression (presence/absence)
-
-
-* independent fits for <div style="color:yellow">regions and seasons</div> 
-
-* With Temperature and pH as fixed effects
-
+* .huge.bold[Independent fits for .nord13[regions and seasons]]
+</br>
+* .huge.bold[With Temperature and pH as fixed effects]
+</br>
 ---
 
 name: Projections to 2095
+### .nord12.bold[Q3] - Future conditions in Puget Sound under RCP8.5
 
-### .center[Future conditions in Puget Sound under RCP8.5]
 
 .left-column[
 
-*  .huge[Target values from Khangaonkar et al, 2019]
+*  .huge.bold[Target values from Khangaonkar et al, 2019]
 
-*  .huge[Future scenario shows some extreme values]
+*  .huge.bold[Future scenario shows .nord13[some extreme] values]
 
-* .huge[Most of the conditions are already present in today's scenario]
+* .huge.bold[Most of the conditions .nord13[are already present] in today's scenario]
 
 ]
 
@@ -916,57 +1019,76 @@ Taking advantage from recently published models for the inner sea
 
 
 
-### .center[.fancy[Sampling from the posterior probabilities:]]
 
 
-* ####  Each taxa's response
 
-<img src="images/Dinophyceaeridges.png" alt="PCRbias" >
+* ##  Each taxa's response
+
+<img src="images/Most.varied.taxa.png" alt="PCRbias" >
 
 
 ---
 
-### .center[.fancy[Sampling from the posterior probabilities:]]
 
-* ####  Diversity estimates
+* ## Diversity estimates
 <img src="images/Dinophyceaerastertitle.png" alt="PCRbias" width="850">
 
 ---
 
-##.left.nord13[In Summary:]
+##.bold.left.nord13[In Summary:]
+.pull-left[
+* .huge.bold[We need appropriate model systems]
 
-* We need model systems that naturally experience Temperature and pH fluctuations
---
-* eDNA metabarcoding is a really powerfull tool to sample:
+
+
+* .huge.bold[eDNA metabarcoding allows:]
     
     * across major taxa
     * studying 100s of species at a time
---
-* Careful consideration of:
+
+* .huge.bold[Careful consideration of:]
     
     * field,
     * laboratory,
-    * bioinformatics processes
---
-* It pays off with:
+    * bioinformatics processes]
 
+.pull-right[
+</br>
+* .huge.bold[It pays off with:]
+</br>
     * community-wide,
     * single species projections
-
+    * diversity estimations
+]
 
 ---
 name: back to the collage
 layout: true
-class: nord-dark, middle
+class: nord-dark
 background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/AcadiaNP.jpg)
 background-size: cover
-## .center[Future directions]
+# .center[Future directions]
 ---
+name:TOC
+* ### [.huge.bold[Ocean acidification and warming]](#OA_Fut)
+* ### [.huge.bold[Harmful Algal Blooms]](#HABs_Fut)
+* ### [.huge.bold[Species Shifts with Climate Change]](#SDM_Fut)
+* ### [.huge.bold[Fisheries: stock assessment]](#Stock_Fut)
+* ### [.huge.bold[Surveying habitats]](#Survey_Fut)
+* ### [.huge.bold[Stats and Community Composition]](#Stats_Fut)
 
-### .center[.fancy[Ocean acidification and warming: impact on marine communities]]
+???
+
+Mentorship - 
+
+Outreach
+
+eDNA as a great opprtunity to investigate and expand a lot of current research - looking forward to hear 
+
+other stuff
 
 ---
-
+name:OA_Fut
 #### .center[.fancy[Ocean acidification and warming: impact on marine communities]]
 
 </br>
@@ -994,13 +1116,11 @@ Potential partners:
 * Aquaculture stakeholders
 
 ]
+[.footnote[Back to the Future]](#TOC)
+
 
 ---
-
-### .center[.fancy[Harmful Algal Blooms]]
-
----
-
+name:HABs_Fut
 ### .center[.fancy[Harmful Algal Blooms]]
 </br>
 
@@ -1027,14 +1147,14 @@ Potential partners:
 * Aquaculture stakeholders
 * High Schools
 
+[.footnote[Back to the Future]](#TOC)
 ]
----
 
-### .center[.fancy[Species Shifts with Climate Change]]
+
 
 ---
 class: center
-
+name:SDM_Fut
 #### .center[.fancy[Species Shifts with Climate Change]]
 
 
@@ -1074,13 +1194,13 @@ Potential partners:
 * State of Maine DMR - Marine invasions
 * Citizen scientists
 
+[.footnote.center[Back to the Future]](#TOC)
 ]
 
----
 
-### .center[.fancy[Fisheries: stock assessment]]
 
 ---
+name:Stock_Fut
 class: center
 #### .center[.fancy[Fisheries: stock assessment]]
 
@@ -1115,6 +1235,8 @@ knitr::include_graphics("images/plots.for.choosing.png" )
 Potential partners:
 * NOAA
 * Fishing companies 
+
+[.footnote.center[Back to the Future]](#TOC)
   ]
 
 ---
@@ -1123,6 +1245,7 @@ Potential partners:
 ### .center[.fancy[Biodiversity surveys]]
 
 ---
+name:Survey_Fut
 class: center
 #### .center[.fancy[Biodiversity surveys]]
 
@@ -1156,16 +1279,14 @@ Potential partners:
 * NOAA
 * Fishing companies
 * WHOI
+
+  [.footnote.center[Back to the Future]](#TOC)
   ]
 
 ---
 
 
-
-
-### .center[.fancy[Biodiversity statistics]]
-
----
+name: Stats_Fut
 class: center
 #### .center[.fancy[Biodiversity statistics]]
 
@@ -1199,13 +1320,29 @@ knitr::include_graphics("images/richness.png" )
 Potential partners:
 * Dr Amy Willis
 * Dr Ryan Kelly
-* Dr Ole Shelton]
+* Dr Ole Shelton
+
+[.footnote.center[Back to the Future]](#TOC)
+]
 
 ---
 layout: false
 class: nord-dark, middle
 background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/RGS.jpg)
+background-size: contain
+
+## .center.bold[Acknowledgments]
+
+* ### My mentors and supervisors: Linda Park, Ole Shelton, Ryan Kelly, Mary Sewell, Rochelle Constantine, Eduardo Lopez
+* ### My labmates, students and friends
+* ### The Funders: NOAA, UW, Packard Foundation, University of Auckland, NIWA
+* ### My family: Ana, Julieta y Damián
+
+---
+layout: false
+class: nord-dark, middle
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/RGS.jpg)
+background-size: contain
 
 ## .center[Thanks for listening]
-
 

@@ -68,6 +68,30 @@ a, a > code {
   float: right;
   padding-top: 1em;
 }
+/* Three-column-all-the-same layout */
+.column1 {
+  color: #777;
+  width: 32%;
+  height: 92%;
+  float: left;
+  padding-top: 1em;
+}
+.column1 h2:last-of-type, .column1 h3:last-child {
+  color: #000;
+}
+.column2 {
+  display: inline-block; 
+  width: 32%;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+.column3 {
+  color: #777;
+  width: 32%;
+  height: 92%;
+  float: right;
+  padding-top: 1em;
+}
 .pull-left3 {
   float: left;
   width: 32%;
@@ -109,3 +133,5 @@ th, td { padding: 5px; }
     left: 0 !important;
   }
 }
+.bold { font-weight: bold; }
+.yellow { color: yellow; }

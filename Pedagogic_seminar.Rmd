@@ -181,7 +181,7 @@ background-size: cover
 
 .pull-right[
 </br>
-```{r}
+```{r, echo=F, message=F, warning=F}
 leaflet(data = read_csv(here("data", "example.sites.csv")) ) %>% 
   addTiles() %>% 
   setView(lat = 43.925, lng = -69.58, zoom = 11.4) %>% 
@@ -202,12 +202,14 @@ leaflet(data = read_csv(here("data", "example.sites.csv")) ) %>%
 * Get hands-on experience in plankton sampling from a vessel.
 * Gain knowledge of the plankton dynamics in the Gulf of Maine
 * **Students to merge morphological and molecular knowledge**
-* **Collect eDNA samples**]
+* **Collect eDNA samples**
+![snapshot of the abundance dataset](images/HappyStudents.png)]
 
 .pull-right[
 </br>
-[picture here of Sorting samples under the scope]()
-[snapshot of the abundance dataset]()
+</br>
+![picture here of Sorting samples under the scope](images/plankton_practical.jpeg)
+
 
 ]  
 
@@ -383,7 +385,12 @@ background-size: cover
 
 ## DNA extraction and PCR amplification
 
-* **Get hands-on experience**:
+
+* **Present the project goals to .nord14[BIO 350]**
+
+or
+
+* **Get hands on experience**
 
   * Each group of three handles one eDNA sample
 
@@ -394,7 +401,11 @@ background-size: cover
   
 .pull-right[
 
-<img src="images/plankton.sampling.jpg" alt="PCRbias"  width = "350"/>
+</br>
+
+
+
+<img src="images/Labwork.jpg" alt="PCRbias"  width = "350"/>
 ]  
 ---
 layout: true
@@ -407,7 +418,7 @@ background-size: cover
 ## Computer Laboratory GOALS
 
 .pull-left[
-## Handling their own community analysis
+### Handling their own community analysis
 
 * **Get hands-on experience**:
 
