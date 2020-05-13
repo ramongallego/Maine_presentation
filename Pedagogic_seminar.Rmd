@@ -399,6 +399,7 @@ or
   * Pooled samples and sequenced]
   
   
+  
 .pull-right[
 
 </br>
@@ -407,6 +408,11 @@ or
 
 <img src="images/Labwork.jpg" alt="PCRbias"  width = "350"/>
 ]  
+
+???
+
+Regardless if they are using genetics in their career, knowledge of how to perform these tasks is paramount.Even from a management side
+
 ---
 layout: true
 class: nord-light,  typo-selection
