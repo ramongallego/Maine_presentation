@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Research seminar</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ramón Gallego" />
+    <meta name="date" content="2020-05-12" />
+    <link href="Research.seminar_files/remark-css/default.css" rel="stylesheet" />
+    <script src="Research.seminar_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="Research.seminar_files/jquery/jquery.min.js"></script>
+    <link href="Research.seminar_files/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="Research.seminar_files/leaflet/leaflet.js"></script>
+    <link href="Research.seminar_files/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="Research.seminar_files/Proj4Leaflet/proj4-compressed.js"></script>
+    <script src="Research.seminar_files/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="Research.seminar_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="Research.seminar_files/leaflet-binding/leaflet.js"></script>
+    <script src="Research.seminar_files/kePrint/kePrint.js"></script>
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/sfah.css" type="text/css" />
+    <link rel="stylesheet" href="css/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/nord.css" type="text/css" />
+    <link rel="stylesheet" href="css/nord-light.css" type="text/css" />
+    <link rel="stylesheet" href="css/nord-dark.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-nord.css" type="text/css" />
+    <link rel="stylesheet" href="css/typo.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class:center,   nord-dark
+
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 90%),rgba(46, 52, 64, 90%),rgba(46, 52, 64, 50%),rgba(46, 52, 64, 40%)),  url("images/night1.jpg") 
+background-position: center
+background-size: cover
+
+&lt;style type="text/css"&gt;
+.small { font-size: 70% }
+.huge  { font-size: 120% }
+&lt;/style&gt;
+
+
+# eDNA in marine systems
+
+
+ 
+### Investigating community ecology and global change with eDNA, metabarcoding and bioinformatics
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+.huge[**Ramón Gallego Simón**]
+
+
+---
+name:bio
+class: nord-dark
+layout: true
+
+
+
+
+##  .center[Bio]
+
+---
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Teide.jpg") 
+background-position: center
+background-size: cover
+
+.leftmost-column[
+.fancy[Ramón Gallego Simón]
+
+
+&lt;img src="images/RGS_profile.jpg" width="716" /&gt;
+
+From the Canary Islands, Spain
+]
+
+
+
+.center-column[
+<div id="htmlwidget-6ab8a6e5169b6ec3fbcb" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6ab8a6e5169b6ec3fbcb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[28.3,-16.5],5.5,[]]},"evals":[],"jsHooks":[]}</script>
+]
+
+.rightmost-column[
+.middle[
+&lt;img src="images/Canary_Islands.jpg" width="5184" /&gt;
+
+]
+
+]
+
+---
+layout: false
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Madridmequema.jpg") 
+background-position: center
+background-size: cover
+
+
+## .center[Ramón Gallego Simón]
+
+.leftmost-column[
+
+
+&lt;img src="images/foto_orla.png" width="1016" height="25%" /&gt;
+
+BSc and MSc in Madrid, Spain
+
+&lt;img src="images/UAM.white.png" width="2665" height="25%" /&gt;
+
+
+]
+
+
+
+.center-column[
+<div id="htmlwidget-2c506bfacdeba8453442" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2c506bfacdeba8453442">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[34,-8],5,[]]},"evals":[],"jsHooks":[]}</script>
+]
+
+.rightmost-column[
+&lt;img src="images/Cabo_De_Gata.jpg" width="600" height="25%" /&gt;
+
+]
+---
+layout: false
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Fern.jpg") 
+background-position: center
+background-size: cover
+
+## .center[Ramón Gallego Simón]
+
+.leftmost-column[
+
+
+&lt;img src="images/doztor.jpg" width="2048" /&gt;
+PhD in Auckland, Aotearoa New Zealand
+
+
+&lt;img src="images/uoa-logo-2015-reverse.png" width="641" height="25%" style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img" /&gt;&lt;img src="images/NIWA_Logo2018.png" width="533" height="25%" style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img" /&gt;
+
+
+]
+
+.center-column[
+
+<div id="htmlwidget-7feface5683eebb0540a" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7feface5683eebb0540a">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[-40,170],4,[]]},"evals":[],"jsHooks":[]}</script>
+]
+
+.rightmost-column[
+&lt;img src="images/Auckland.jpg" width="1333" height="25%" /&gt;
+
+]
+
+
+
+???
+
+All this to say, that coming from Spain to New Zealand... you are in for an interesting accent today
+
+---
+
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Seattle.jpg") 
+background-position: center
+background-size: cover
+
+## .center[Ramón Gallego Simón]
+
+.leftmost-column[
+
+
+&lt;img src="images/PNW.jpg" width="2549" /&gt;
+To a Postdoc in Seattle, WA
+
+&lt;img src="images/SMEA.png" width="1333" style="background-color: #9ecff7; padding:5px; display: inline-block;" /&gt;&lt;img src="images/UW_trans.png" width="995" style="background-color: #9ecff7; padding:5px; display: inline-block;" /&gt;
+]
+.center-column[
+<div id="htmlwidget-029b1333793d55f5dedc" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-029b1333793d55f5dedc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[47,-122],7,[]]},"evals":[],"jsHooks":[]}</script>
+]
+
+.rightmost-column[
+
+&lt;img src="images/2017-05-08-ARL-1470.JPG" width="6912" /&gt;
+
+And another postdoc 
+&lt;img src="images/NOAA-fisheries-logo.jpg" width="1333" /&gt;
+
+]
+---
+
+layout: false
+name: Interests
+background-image: url("images/CORE.png")
+background-position: center
+background-size: contain
+
+
+???
+Theme slide to prepare people for this 
+
+Firsts the core, then bring in the details
+
+Picture for Future directions
+
+_But In all these movements, I have always had a focus on marine communities, and how to describe them, characterize their change and put it in context with the environment that they occur._
+
+---
+layout: false
+name: Skills
+background-image: url("images/Skills.png")
+background-position: center
+background-size: contain
+
+
+???
+
+AND THAT TAKES developing some _Skills_
+
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS1.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS2.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS3.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS4.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/OTHERPROJECTS5.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+
+layout: false
+name: Interests
+background-image: url("images/facet.png")
+background-position: center
+background-size: contain
+
+
+???
+
+Which have allowed me to tackle other questions. And that's one of the things that are great ab eDNA.. 
+
+
+---
+name: meroplankton photos
+layout: true
+class: nord-light, typo-selection
+## .center.bold[Meroplankton in the Southern Ocean]
+
+---
+
+
+.center[&lt;img src="images/Marine.comms.png" alt="pipeline" width="800" /&gt;]
+
+???
+
+During my PhD I studied merplankton communities **transition** 
+
+---
+class: nord-dark
+layout: true
+name: Meroplankton
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),url("images/fondo.antartida.JPG")
+background-position: center
+background-size: cover
+
+---
+
+## What is the larval diversity in the Coastal Ross Sea?
+
+&lt;/br&gt;
+.pull-left[
+&lt;img src="images/LGP_map.png" alt="pipeline" width =480 /&gt;
+]
+
+.pull-right[
+
+.pull-left[&lt;img src="images/Antarctica-New-Zealand-Program-Logo.jpg" alt="pipeline" width =240 /&gt;]
+
+.pull-right[&lt;img src="images/uoa-logo-2015-reverse.png" alt="pipeline" width =240 /&gt;]
+
+&lt;/br&gt;
+
+.center[&lt;img src="images/sampling.jpg" alt="pipeline" width =400 /&gt;]
+
+]
+---
+class: middle
+
+.left-column[
+* ### Many types - how many species?
+&lt;/br&gt;
+&lt;img src="images/hole.jpg" alt="pipeline" /&gt;
+&lt;/br&gt;
+
+]
+
+
+.right-column[
+
+&lt;img src="images/Larvae.png" alt="pipeline" /&gt;
+]
+
+.footnote.oc-bg-black.opacity-10.nord-dark[
+**Gallego, R.**, Heimeier, D., Lavery, S., Sewell, M.A. 2015. The meroplankton communities from the
+coastal Ross Sea: a latitudinal study. Hydrobiologia, 761 (1): 195-209]
+
+???
+
+And I was interested in testing the idea of a decreasing planktonic diversity at higher latitudes, known as Thorson's rule
+
+But a crucial step is a reliable identification of the species found **transition**
+
+---
+class: nord-dark
+name: Next steps Bathylasma
+
+## .center[ Two life stages: how does environmental change affects them?]
+
+.left-column[
+
+  * Larvae 
+
+&lt;img src="images/Nauplius.jpg" alt="pipeline" width="150" /&gt;
+
+  * Adults
+
+&lt;img src="images/bathylasma-corolliforme-BG5FDT.jpg" alt="pipeline" width="150" /&gt;
+]
+
+.right-column[
+.center[&lt;img src="images/Profile.png" alt="pipeline" width="600" /&gt;]
+&lt;!-- ![](images/Profile.png) --&gt;
+]
+
+
+???
+
+One of the most crucial points in my research path came with the idea that a meroplankton community not 
+only tells us about the diversity similarity along a gradient, but also about the life history of the species present 
+
+---
+name: Bathylasma larvae and adult
+class: nord-dark
+### Habitat Suitability changes differently for 
+.pull-left[
+### Adults
+&lt;img src="images/change_ad.png" alt="pipeline" width="550" /&gt;
+]
+
+.pull-right[
+### Larvae
+&lt;img src="images/change_lv.png" alt="pipeline" width="550" /&gt;
+]
+
+.footnote.oc-bg-black.opacity-10.nord-dark[
+**Gallego, R.**, Basher, Z., Lavery, S., Dennis, T.E., Sewell, M.A. 2017. On the need to consider multiphasic sensitivity of marine organisms to climate change: a case study of the Antarctic acorn barnacle.
+Journal of Biogeography, 44: 2165-2175]
+
+???
+
+And we opened the door to applying distribution models to species detected using molecular tools,
+and forecasting shifts in their distributions with climate change. To which we'll come back later  
+---
+
+name: Bathylasma larvae and adult
+class: nord-dark
+### Habitat Suitability changes differently for 
+.pull-left[
+### Adults
+&lt;img src="images/change_ad_k.png" alt="pipeline" width="550" /&gt;
+]
+
+.pull-right[
+### Larvae
+&lt;img src="images/change_lv_k.png" alt="pipeline" width="550" /&gt;
+]
+.footnote.oc-bg-black.opacity-10.nord-dark[
+**Gallego, R.**, Basher, Z., Lavery, S., Dennis, T.E., Sewell, M.A. 2017. On the need to consider multiphasic sensitivity of marine organisms to climate change: a case study of the Antarctic acorn barnacle.
+Journal of Biogeography, 44: 2165-2175]
+---
+name:Onesp-multisp-eDNA
+class: nord-dark, typo-selection
+
+background-image:url("images/eDNA_concept.png")
+.right[
+.footnote.small[Kelly Lance 2014]]
+---
+
+class: nord-dark
+
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 50%), rgba(255, 255, 255, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+## .center.nord11[Species Detection]
+
+
+
+
+
+.center[&lt;img src="images/Step1_Species.png" alt="pipeline" width="800" /&gt;]
+
+
+???
+
+And directly linked to this idea of linking Certain key species with their communities and the environment is the ability to 
+
+detect and identify sequences to the species they originated fromd
+
+---
+class: nord-light,  typo-selection
+name: bkg1
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 50%), rgba(255, 255, 255, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+layout: true
+---
+
+## .center.nord11[Species Detection]
+
+.center[&lt;img src="images/Species.detection.png" alt="pipeline" width="800" /&gt;]
+
+---
+class: nord-light
+name: Pipelines
+layout: false
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 50%), rgba(255, 255, 255, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+&lt;/br&gt; 
+# .center.nord9.bold[BIOINFORMATICS for species ID]
+&lt;/br&gt; 
+.pull-left.oc-bg-black.opacity-40.nord-light.bold[
+
+* ####  .bold[A demultiplexing and clustering pipeline]
+
+.center[&lt;img src="images/demultiplexer.png" alt="pipeline" width="350" /&gt;]
+
+.center[[github.com/ramongallego](https://github.com/ramongallego?tab=repositories) 
+&lt;img src="images/GitHub-Mark-64px.png" alt="pipeline" /&gt;]
+ 
+ * A locus-specific classification tree with curated sequences 
+ 
+
+
+]
+
+
+.pull-right.oc-bg-black.opacity-10.nord-light.bold[
+ * QC and decontamination steps
+ 
+ 
+
+ .center[&lt;img src="images/visual.anova.png" alt="pipeline" width="350" /&gt;]
+ 
+ 
+
+ 
+* High confidence in presence and identity 
+ 
+ 
+ 
+ ]
+ 
+???
+
+So I designed a bioinformatics pipeline to ensure we
+
+---
+name: Solvingnumbers
+
+
+## Now we have an abundance table
+&lt;/br&gt;
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Taxa &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample1 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample2 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample3 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample4 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample5 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample6 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Phaeocystis antarctica &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1929 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 138 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 11386 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2590 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Rhizosolenia setigera &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Micromonas pusilla &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 233 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 216 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Bathycoccus prasinos &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1362 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 203 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 433 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Cylindrotheca closterium &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Balanus sp. &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Thalassiosira nordenskioeldii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Ditylum brightwellii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Minutocellus polymorphus &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Chaetoceros socialis &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+## What does this tell us about the world?
+&lt;/br&gt;
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Taxa &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample1 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample2 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample3 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample4 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample5 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample6 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;background-color: yellow !important;"&gt; Phaeocystis antarctica &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;background-color: yellow !important;"&gt; 1929 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 138 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 11386 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: yellow !important;"&gt; 2590 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Rhizosolenia setigera &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Micromonas pusilla &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 233 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 216 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Bathycoccus prasinos &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1362 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 203 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 433 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Cylindrotheca closterium &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Balanus sp. &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Thalassiosira nordenskioeldii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Ditylum brightwellii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Minutocellus polymorphus &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Chaetoceros socialis &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+layout: true
+### .center[eDNA metabarcoding and quantification]
+
+---
+
+
+ 
+
+
+
+.center[&lt;img src="images/Simulation.png" alt="pipeline" width="800" /&gt;]
+
+???
+
+We want to get the most information from our sequencing run 
+But can we trust the number of reads assigned to each species as 
+---
+
+class: nord-dark, middle, center
+name: PCR paper front
+
+
+
+&lt;img src="images/UnderstandingPCR.png" alt="PCRbias" width="720" /&gt;
+
+???
+
+How to interpret the number of occurrences of a sequence in a sample?  
+
+---
+class: nord-dark, typo, typo-selection
+
+
+.left-column[
+
+
+ ## .nord4.bold[Differential Primer Affinity]
+
+ ## .nord4.bold[Strong effect on] .nord13.bold[DIVERSITY]
+]
+
+--
+
+.right-column[ 
+ 
+
+
+
+
+.center[&lt;img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig4_HTML.png?as=webp" alt="PCRbias" width="900" /&gt;
+]]
+
+
+---
+
+class: nord-dark
+
+
+.left-column[
+&lt;/br&gt;
+&lt;img src="images/UnderstandingPCR.png" alt="PCRbias" width="200" /&gt;
+
+## .center[ We can get .bold[quantitative] information from metabarcoding]
+
+
+
+]
+
+
+
+.right-column[ 
+ 
+
+
+
+.center[
+&lt;img src="images/Understanding1.png" alt="PCRbias" width="540" /&gt;]]
+
+.footnote.oc-bg-black.opacity-10.nord-dark[
+Kelly, R.P., Shelton, A., **Gallego, R**. 2019. Understanding PCR Processes to Draw Meaningful Conclusions from Environmental DNA Studies. Scientific Reports, 9(1):1-14.]
+---
+name:OA_cover
+layout: true
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+### .center[Ocean Acidification and warming]
+
+---
+
+name: And all those tools will become handy...
+
+.center[&lt;img src="images/highlighted.png" alt="pipeline" width="800" /&gt;]
+
+
+???
+So now that we have a set of tools for Quantification, species id and QC we can tackle ecological Qs with eDNA metabarcoding
+
+---
+
+class: nord-dark
+name: How will forecasted conditions shape coastal communities
+
+
+.pull-left[
+&lt;/br&gt;
+.center[&lt;img src="images/sst.models.1.png" alt="sst" width="400" /&gt;]]
+
+.pull-right[
+&lt;/br&gt;
+&lt;img src="images/pH_Global_ave_E.png" alt="PCRbias" width="480" /&gt; 
+]
+
+---
+class: nord-dark
+## .center[.fancy[Affectting marine species ]
+
+.pull-left[
+&lt;img src="images/oyster pg 2.jpg" alt="PCRbias" width="360" /&gt;
+]
+
+
+.pull-right[
+&lt;img src="images/Limacina.png" alt="PCRbias" width="360" /&gt;]
+]
+
+
+
+???
+With global warming and increased pCO2 levels, there is little doubt that future marine communities will have to face a warmer, more acidic ocean
+---
+class: nord-dark
+name: A lot of info on many spp
+
+ &lt;img src="images/paper_snip.OA.Oph.png" alt="PCRbias" height="100" /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.Lima.png" alt="PCRbias"  /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.many.png" alt="PCRbias" height="100" /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.Meta.png" alt="PCRbias" height="120" /&gt;
+
+???
+
+Those effects are not happenning in a vacuum, but likely with Temp
+And in different directions
+---
+class: nord-dark
+Name: Ecosystem-wide: not so much
+
+&lt;img src="images/paper_snip.OA.Comm1.png" alt="PCRbias" height=120  /&gt;
+
+
+&lt;img src="images/paper_snip.OA.Comm2.png" alt="PCRbias" height="120" /&gt;
+
+.pull-left[
+&lt;img src="images/paper_snip.OA.Comm3.png" alt="PCRbias" width=250/&gt;
+]
+
+--
+
+.pull-right[
+.middle[
+.fancy[
+## Expanding to other ecosystems]]
+]
+---
+name: WHy Hood Canal
+class: middle, nord-dark
+###.center[.fancy[.title[Why the Puget Sound?]]]
+
+Naturally occuring High *p*CO&lt;sub&gt;2&lt;/sub&gt;  levels offer a view of not far-fetched conditions
+&lt;img src="images/paper_snip.OA.why.png" alt="PCRbias" /&gt;
+
+
+
+---
+class: nord-dark
+name: Research plan
+
+##.center[.fancy[.title[Experimental design]]]
+
+.pull-left[
+
+<div id="htmlwidget-2f97b55355ecb4a349b7" style="width:90%;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2f97b55355ecb4a349b7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[48.449827,48.545085,48.5145,47.462959,47.35981,47.856772,47.608961,47.378431],[-122.963231,-123.012028,-123.151,-123.103774,-123.155597,-122.607721,-122.984734,-122.97483],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CP","FH","LK","LL","PO","SA","TR","TW"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[1,1],"textsize":"20px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[47.5,-122.5],7,[]],"limits":{"lat":[47.35981,48.545085],"lng":[-123.155597,-122.607721]}},"evals":[],"jsHooks":[]}</script>
+]
+
+--
+
+.pull-right[
+
+.center[
+&lt;img src="images/ridges.env.vars.png" alt="PCRbias" /&gt;
+]
+
+]
+
+---
+name: Smpling design
+class: nord-dark
+##.center[.fancy[Sampling design]]
+
+.left-column[
+* .huge.bold[Monthly sampling]
+      * Both eDNA and environmental sensing
+
+*  .huge.bold[Biological replication]
+
+* .huge.bold[Technical replication]
+]
+.right-column.center[&lt;img src="images/Biol.rep.png" alt="PCRbias" width="720" /&gt;
+]
+
+.footnote.oc-bg-black.opacity-10.center.nord-dark[**Gallego, R.**, Jacobs-Palmer, E., Cribari, K., Kelly, R.P. Environmental DNA Metabarcoding Reveals Winners and Losers of Global Change in Coastal Waters. Under resubmission at *Proceedings B.*]
+
+???
+
+This sampling was carried out in a single day, which when working in a coastal sampling, brings in a major 
+---
+class: nord-dark, middle
+name: But the tides?
+#.center.nord13.bold[.fancy[What about the tides?]]
+
+* ### Sampling happens in one day and
+
+* ### Seasonality of tide cycle 
+
+--
+
+###.center.nord13.bold[Do tide height and direction determine the community recovered?]
+---
+layout: false
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/low-tide1.jpg)
+background-size: cover
+name: Tides1
+
+
+##.center[What about the tides?]
+---
+template: Tides1
+
+
+
+.left-column.huge[
+* .huge.bold[Even at small spatial scales]]
+
+.right-column.center[
+&lt;img src="images/Tides.map.png" alt="PCRbias"  width="600"/&gt;
+]
+---
+template: Tides1
+
+.left-column.huge[
+* .huge.bold[It's a small source of variation]]
+
+.right-column.center[
+&lt;img src="images/Tides.perm.png" alt="PCRbias"  /&gt;
+]
+
+---
+template: Tides1
+
+.left-column[
+* .huge.bold[And communities showed in the same locality regardless&lt;sup&gt;*&lt;/sup&gt; of the tide]]
+
+.right-column.center[
+&lt;img src="images/Tides.fig.png" alt="PCRbias" /&gt;
+]
+
+
+.footnote.oc-bg-black.opacity-10.center.nord-dark[Kelly, R. P., **Gallego, R.**, Jacobs-Palmer, E. 2018. The effect of tides on nearshore environmental DNA.
+PeerJ, 6:e4521.]
+
+---
+template:OA_cover
+name: Dowehavewhatweneed
+layout: true
+
+---
+
+&lt;/br&gt;
+## .bold[Have we covered our bases?] (This is baseball talk, right?)
+.column1[
+*  .center.bold.huge.nord12[A sampling design] 
+&lt;img src="images/experimental.design.png" alt="PCRbias" /&gt;
+]
+.column2[
+* .center.bold.huge.nord12[Influence of tides]
+.center[&lt;img src="images/Tides.fig.png" alt="PCRbias" /&gt;]
+]
+
+.column3[
+* .center.bold.huge.nord12[Bioinformatics tools to clean the data]
+.center[&lt;img src="images/demultiplexer.png" alt="pipeline" width="350" /&gt;]
+]
+
+
+
+---
+name: Shiny app
+class: nord-dark
+
+## .center[.nord12[Question 1]: Can we see the spatio temporal patterns of the species found]
+
+&lt;/br&gt;
+
+### We can visualize the fluctuations
+
+&lt;video width="320" height="240"&gt;
+&lt;source src="images/Shiny.mov" type="video/mp4"&gt;
+&lt;/video&gt;
+
+
+---
+class: nord-dark
+name: using both PA and eDNAindex
+layout: true
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+---
+
+### .center[.nord12[Question 2]: Do we see different Communities associated with&lt;br&gt; Temperature and pH]
+
+---
+### .nord12[Question 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_1.png" alt="PCRbias" width="560" &gt;
+]
+---
+### .nord12[Question 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_2.png" alt="PCRbias" width="600" &gt;
+]
+---
+### .nord12[Question 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_3.png" alt="PCRbias" width="600" &gt;
+]
+---
+layout: true
+template: Dowehavewhatweneed
+name: Q3
+class: nord-dark
+
+---
+### .nord12[Question 3]: How do species fare in the future Puget Sound
+
+&lt;/br&gt;
+##.fancy[Modelling the presence of each taxa:]
+&lt;/br&gt;
+* .huge.bold[We fit a logistical regression (presence/absence)]
+&lt;/br&gt;
+
+* .huge.bold[Independent fits for .nord13[regions and seasons]]
+&lt;/br&gt;
+* .huge.bold[With Temperature and pH as fixed effects]
+&lt;/br&gt;
+---
+
+name: Projections to 2095
+### .nord12.bold[Q3] - Future conditions in Puget Sound under RCP8.5
+
+
+.left-column[
+
+*  .huge.bold[Target values from Khangaonkar et al, 2019]
+
+*  .huge.bold[Future scenario shows .nord13[some extreme] values]
+
+* .huge.bold[Most of the conditions .nord13[are already present] in today's scenario]
+
+]
+
+.right-column[
+&lt;img src="images/Future_scenario.png" alt="PCRbias"&gt;]
+
+???
+
+Taking advantage from recently published models for the inner sea
+---
+
+
+
+
+
+
+* ##  Each taxa's response
+
+&lt;img src="images/Most.varied.taxa.png" alt="PCRbias" &gt;
+
+
+---
+
+
+* ## Diversity estimates
+&lt;img src="images/Dinophyceaerastertitle.png" alt="PCRbias" width="850"&gt;
+
+---
+
+##.bold.left.nord13[In Summary:]
+.pull-left[
+* .huge.bold[We need appropriate model systems]
+
+
+
+* .huge.bold[eDNA metabarcoding allows:]
+    
+    * across major taxa
+    * studying 100s of species at a time
+
+* .huge.bold[Careful consideration of:]
+    
+    * field,
+    * laboratory,
+    * bioinformatics processes]
+
+.pull-right[
+&lt;/br&gt;
+* .huge.bold[It pays off with:]
+&lt;/br&gt;
+    * community-wide,
+    * single species projections
+    * diversity estimations
+]
+
+---
+name: back to the collage
+layout: true
+class: nord-dark
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/AcadiaNP.jpg)
+background-size: cover
+# .center[Future directions]
+---
+name:TOC
+* ### [.huge.bold[Ocean acidification and warming]](#OA_Fut)
+* ### [.huge.bold[Harmful Algal Blooms]](#HABs_Fut)
+* ### [.huge.bold[Species Shifts with Climate Change]](#SDM_Fut)
+* ### [.huge.bold[Fisheries: stock assessment]](#Stock_Fut)
+* ### [.huge.bold[Surveying habitats]](#Survey_Fut)
+* ### [.huge.bold[Stats and Community Composition]](#Stats_Fut)
+
+???
+
+Mentorship - 
+
+Outreach
+
+eDNA as a great opprtunity to investigate and expand a lot of current research - looking forward to hear 
+
+other stuff
+
+---
+name:OA_Fut
+#### .center[.fancy[Ocean acidification and warming: impact on marine communities]]
+
+&lt;/br&gt;
+.pull-left.oc-bg-black.opacity-40.nord-dark[
+
+Goals:
+
+* Extrapolate to a different cold-temperate ecosystem
+
+* Model food web interactions from metabarcoding data
+
+* Project food webs into predicted conditions
+
+* Benthic taxa - Expand dataset to include more localities
+
+]
+
+.pull-right.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
+* Sea Grant
+* NOAA's Ocean Acidification Program
+* States' DNR
+* Non-profit
+* Aquaculture stakeholders
+
+]
+[.footnote[Back to the Future]](#TOC)
+
+
+---
+name:HABs_Fut
+### .center[.fancy[Harmful Algal Blooms]]
+&lt;/br&gt;
+
+.pull-left.oc-bg-black.opacity-40.nord-dark[
+
+Goals:
+
+* Network of early detection
+
+* Metabarcoding and Multivariate predictors
+
+* Citizen's engagement
+
+&lt;img src="images/Pseudonitzschia2.jpg" alt="PCRbias" width="450"&gt;
+
+
+]
+.pull-right.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
+* Sea Grant
+* States' DNR
+* Non-profit
+* Aquaculture stakeholders
+* High Schools
+
+[.footnote[Back to the Future]](#TOC)
+]
+
+
+
+---
+class: center
+name:SDM_Fut
+#### .center[.fancy[Species Shifts with Climate Change]]
+
+
+
+.leftmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Goals:
+
+* Automate data gathering and processing
+
+* Establish collaborations across states
+
+* Project marine invaders risk assesment
+
+* Seascape genetics for benthic-planktonic
+]
+
+.center-column[
+.center[
+
+
+&lt;img src="images/SDMs.png" width="85%" style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img" /&gt;&lt;img src="images/green.crab.jpg" width="85%" style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img" /&gt;
+]
+
+
+
+
+]
+
+.rightmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
+* NSF
+* State of Maine DMR - Marine invasions
+* Citizen scientists
+
+[.footnote.center[Back to the Future]](#TOC)
+]
+
+
+
+---
+name:Stock_Fut
+class: center
+#### .center[.fancy[Fisheries: stock assessment]]
+
+.leftmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Goals:
+
+* Collect eDNA data alongside current methods
+
+* Establish collaborations with NEFSC
+
+* eDNA qPCR assays and metabarcoding communities
+
+
+]
+
+.center-column[
+.center[
+
+
+&lt;img src="images/plots.for.choosing.png" width="100%" style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img" /&gt;
+]
+
+]
+
+
+.rightmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
+* NOAA
+* Fishing companies 
+
+[.footnote.center[Back to the Future]](#TOC)
+  ]
+
+---
+
+
+### .center[.fancy[Biodiversity surveys]]
+
+---
+name:Survey_Fut
+class: center
+#### .center[.fancy[Biodiversity surveys]]
+
+.leftmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Goals:
+
+* Leverage from in house &amp; collaborators eDNA surveys
+
+* Design &amp; test in silico &amp; laboratory assays
+
+
+]
+
+.center-column[
+.center[
+
+
+&lt;img src="images/Deepwater.jpeg" width="100%" style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img" /&gt;
+]
+
+]
+
+
+.rightmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
+* NOAA
+* Fishing companies
+* WHOI
+
+  [.footnote.center[Back to the Future]](#TOC)
+  ]
+
+---
+
+
+name: Stats_Fut
+class: center
+#### .center[.fancy[Biodiversity statistics]]
+
+.leftmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Goals:
+
+* Crunching numbers
+
+* A set of guidelines for biodiversity statistics with eDNA / metabarcoding 
+
+
+]
+
+.center-column[
+.center[
+
+
+&lt;img src="images/richness.png" width="100%" style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img" /&gt;
+]
+
+]
+
+
+.rightmost-column.oc-bg-black.opacity-40.nord-dark[
+
+Potential partners:
+* Dr Amy Willis
+* Dr Ryan Kelly
+* Dr Ole Shelton
+
+[.footnote.center[Back to the Future]](#TOC)
+]
+
+---
+layout: false
+class: nord-dark, middle
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/RGS.jpg)
+background-size: contain
+
+## .center.bold[Acknowledgments]
+
+* ### My mentors and supervisors: Linda Park, Ole Shelton, Ryan Kelly, Mary Sewell, Rochelle Constantine, Eduardo Lopez
+* ### My labmates, students and friends
+* ### The Funders: NOAA, UW, Packard Foundation, University of Auckland, NIWA
+* ### My family: Ana, Julieta y Damián
+
+---
+layout: false
+class: nord-dark, middle
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 70%), rgba(0,0,0, 50%)),url(images/RGS.jpg)
+background-size: contain
+
+## .center[Thanks for listening]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
