@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Pedagogic seminar</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ramón Gallego" />
+    <meta name="date" content="2021-04-29" />
+    <script src="slides_files/header-attrs/header-attrs.js"></script>
+    <script src="slides_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="slides_files/jquery/jquery.min.js"></script>
+    <link href="slides_files/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="slides_files/leaflet/leaflet.js"></script>
+    <link href="slides_files/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="slides_files/proj4/proj4.min.js"></script>
+    <script src="slides_files/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="slides_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="slides_files/leaflet-binding/leaflet.js"></script>
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/nord-light.css" type="text/css" />
+    <link rel="stylesheet" href="css/nord.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-nord.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Pedagogic seminar
+## Teaching Marine Ecology in times of uncertainty
+### Ramón Gallego
+### 2021-04-29
+
+---
+
+class:center,   inverse , middle
+
+background-image: linear-gradient(150deg,rgba(0,0,0, 20%),rgba(0,0,0, 40%),rgba(0,0,0, 30%),rgba(0,0,0, 30%)),  url(images/bkg_plankton.png)
+background-position: center
+background-size: contain
+
+
+
+&lt;style type="text/css"&gt;
+.small { font-size: 70% }
+.huge  { font-size: 120% }
+&lt;/style&gt;
+
+
+# Zooplankton Ecology
+
+
+ 
+### How marine wanderers shape  &lt;/br&gt; major ecological processes 
+
+.footnote.right[Ramón Gallego Simón, PhD]
+
+
+
+???
+
+Welcome everyone. Here I want to present a lecture/lectures for students of Marine Ecology. 
+
+---
+
+class:  nord-dark, typo-selection
+name: TOC
+background-image: linear-gradient(150deg,rgba(0,0,0, 80%),rgba(0,0,0, 90%),rgba(0,0,0, 30%),rgba(0,0,0, 10%)),  url(images/bkg_plankton.png)
+background-position: center
+background-size: contain
+layout: true
+
+---
+
+
+# .center[A part of 
+
+&lt;img src="images/Intro_Marine_Ecology.png" width="875" style=".center" /&gt;
+
+]
+---
+
+class: nord-dark, typo-selection
+.pull-left[
+# Outline
+
+* Leverage on the concepts that this course is based on:
+    * Competition
+    * Predation
+    * Adaptation
+
+* Sees them in action in a group easily overlooked
+
+* Combine field, laboratory, theory and bioinformatics
+]
+
+.pull-right[
+# Learning goals:
+
+* Diversity of zooplankton in:
+    * Taxonomic
+    * Size
+    * Residence
+
+* Importance of zooplankton as:
+
+    * Phytoplankton grazers
+    * Moving nutrients around
+    * Keystone species for food webs
+    * [Connectivity]() between populations
+
+* Showcase diversity in this field 
+]
+
+---
+.pull-left[
+# Learning places
+
+
+* Field work at Darling Marine Center
+
+* Lectures
+
+* Laboratory: 
+    * Genetics **BIO 350**
+    
+    * Statistics for community ecology in **R**
+
+]
+
+.pull-right[
+# Learning tools:
+
+* Increase **engagement** through photos and other media
+
+* Increase **participation** during classes with quiz-like questions
+
+* Increase **learning** by using reverse-classroom setup on certain topics
+
+* Increase student's connection with the topic by using examples from **local ecosystems**
+]
+
+---
+layout: true
+class: nord-light,  typo-selection
+name: Darling 
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 80%), rgba(255, 255, 255, 20%)) ,url(images/Darling.jpg)
+background-size: cover
+---
+
+
+.pull-left.black[
+### Field work GOALS
+
+
+
+
+* **Get hands-on experience in plankton sampling from a vessel.**:
+
+  * Each student gets to use a plankton net
+  
+  * Each student gets to collect and tally environmental data]
+  
+  
+.pull-right[
+
+&lt;img src="images/plankton.sampling.jpg" alt="PCRbias"  width = "350"/&gt;
+]  
+
+---
+
+.pull-left.black[
+### Field work GOALS
+
+
+
+
+* Get hands-on experience in plankton sampling from a vessel.
+
+* **Gain knowledge of the plankton dynamics in the Gulf of Maine**:
+
+    * Diversity
+    
+    * Composition changes
+    
+    * Environmental gradients]
+
+.pull-right[
+&lt;/br&gt;
+<div id="htmlwidget-776d800d70a3d5cce00a" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-776d800d70a3d5cce00a">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[43.95,43.92,43.89,43.85],[-69.58,-69.58,-69.57,-69.57],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["ST_1","ST_2","ST_3","ST_4"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[43.925,-69.58],11.4,[]],"limits":{"lat":[43.85,43.95],"lng":[-69.58,-69.57]}},"evals":[],"jsHooks":[]}</script>
+
+]  
+
+---
+
+
+.pull-left.black[
+### Field work GOALS
+
+
+
+
+* Get hands-on experience in plankton sampling from a vessel.
+* Gain knowledge of the plankton dynamics in the Gulf of Maine
+* **Students to merge morphological and molecular knowledge**
+* **Collect eDNA samples**
+![snapshot of the abundance dataset](images/HappyStudents.png)]
+
+.pull-right[
+&lt;/br&gt;
+&lt;/br&gt;
+![picture here of Sorting samples under the scope](images/plankton_practical.jpeg)
+
+
+]  
+
+---
+layout: true
+class: nord-dark,  typo-selection
+name: Lectures 
+background-image: linear-gradient(150deg, rgba(0,0,0, 100%), rgba(0,0,0, 80%), rgba(0,0,0, 20%)) ,url(images/bkg_plankton.png)
+background-size: cover
+---
+name: Lect1
+.pull-left[
+### Lecture   GOALS
+
+* ###**Diversity of Zooplankton**]
+
+.pull-right[
+
+### Lecture   TOOLS
+
+* QUIZ-LIKE series of pics
+&lt;/br&gt;
+* Slides showing diversity in:
+&lt;/br&gt;
+
+    * Phyla
+
+    * Sizes
+
+    * Presence (holo- vs meroplankton)
+
+
+] 
+
+---
+name: demo-slide1
+
+## QUIZ TIME: PLANKTON EDITION
+
+1. Do you know which of these is the largest zooplankton specimen ever found?
+.pull-left[
+# A. Pyrosome
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/46GtJJorxIg?start=1&amp;end=9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+.pull-right[
+# B.  Siphonophore
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/jnJE37twrzk?start=12&amp;end=18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+
+---
+name: demo-slide1
+
+## QUIZ TIME: PLANKTON EDITION
+
+2. Do you know which of these is the most abundant zooplankton?
+.pull-left[
+# A. Copepods
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/kOdqwdegml4?start=9&amp;end=15" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+.pull-right[
+# B. Krill
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/oO-KRciHsTo?start=5&amp;end=12" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+---
+
+
+
+
+
+name: Lect2
+
+.pull-left[
+### Lecture   GOALS
+
+* **Diversity of Zooplankton**
+
+* ###**Role of Zooplankton in transfering and distributing production**]
+
+.pull-right[
+
+### Lecture   topics
+
+
+
+
+* phytoplankton productivity : 94% of all oceans primary production
+
+* Zooplankton as grazers -&gt; make that primary production available up the food chain
+
+* Carcasses and fecal pellets as major drivers of bentho-pelagic coupling:
+    * Benthic filter feeders
+    * Bacterial mats -&gt; decomposition
+
+]
+
+---
+
+name: Lect3
+.pull-left[
+### Lecture   GOALS
+
+* **Diversity of Zooplankton**
+&lt;/br&gt;
+
+* **Role of Zooplankton in transfering and distributing production**
+&lt;/br&gt;
+* ### **Ecological Processes** ]
+.pull-right[
+
+### Lecture TOPICS
+* ##  **Predation** 
+* ## **Adaptation**
+* ## **Competition**
+]
+
+--
+
+.center[
+## The Gulf of Maine Copepod assemblages
+]
+---
+name: GoM.copepod
+
+# The Gulf of Maine Copepod assemblages
+
+* ### Working example to showcase major ecological processes
+
+* ### Major spp components show .huge.nord11[Adaptation] to different conditions
+
+.st.noborder[
+|  | **Cold water** | **Warm water** |
+| ---- | ---- | ----: |
+| **Small** | _Pseudocalanus_ spp. &lt;/br&gt;&lt;/br&gt; _O.similis_  | _T. longicornis_ &lt;/br&gt; _P. parvus_  &lt;/br&gt; _Centropages_ spp.&lt;/br&gt; _O. similis_ |
+| **Large**  | _C. finmarchicus_&lt;/br&gt;&lt;/br&gt; _M. lucens_|     |
+
+]
+---
+name: GoM.copepod
+class: center
+
+# The Gulf of Maine Copepod assemblages
+
+* ### Working example to showcase major ecological processes
+
+* ### Major spp components show .huge.nord11[Adaptation] to different conditions
+
+* ### .huge.nord11[Predation] upon copepods can shape community composition
+.leftmost-column[
+![**Haddock**](images/haddock.jpeg)
+]
+.center-column[
+![*C. finmarchicus*](images/Cfinmarchicus.jpeg)
+]
+.rightmost-column[
+&lt;img src="images/Pseudocalanus.jpg" alt="pipeline" width =240 /&gt;
+]
+
+---
+
+layout: true
+class: nord-light,  typo-selection
+name: Laboratory 
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 80%), rgba(255, 255, 255, 20%)) ,url(images/Geneticslab_bigelow.png)
+background-size: cover
+---
+
+.pull-left.black[
+### Laboratory practical GOALS
+
+
+## DNA extraction and PCR amplification
+
+
+* **Present the project goals to .nord14[BIO 350]**
+
+or
+
+* **Get hands on experience**
+
+  * Each group of three handles one eDNA sample
+
+  * Each student gets to generate their own PCR replicate
+  
+  * Pooled samples and sequenced]
+  
+  
+  
+.pull-right[
+
+&lt;/br&gt;
+
+
+
+&lt;img src="images/Labwork.jpg" alt="PCRbias"  width = "350"/&gt;
+]  
+
+???
+
+Regardless if they are using genetics in their career, knowledge of how to perform these tasks is paramount.Even from a management side
+
+---
+layout: true
+class: nord-light,  typo-selection
+name: Laboratory 
+background-image: linear-gradient(150deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 80%), rgba(255, 255, 255, 20%)) ,url(images/computer_labs.jpg)
+background-size: cover
+---
+
+## Computer Laboratory GOALS
+
+.pull-left[
+### Handling their own community analysis
+
+* **Get hands-on experience**:
+
+  * All students get the same datasets:
+      
+      * Morphological ID abundances from the field work
+      
+      * eDNA dataset (Already demultiplexed, QC'd &amp; ID'ed)
+      
+      * Environmental data
+
+  * They get to use **R** to do their analysis and generate their reports
+  
+  * Analysis can be done in a web-browser using Rstudio.cloud]
+  
+  
+.pull-right[
+
+&lt;img src="images/bioinf.jpg" alt="PCRbias"  width = "350"/&gt;
+]  
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
